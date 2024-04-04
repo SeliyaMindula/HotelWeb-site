@@ -1,0 +1,732 @@
+/* Google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,100&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color: #333;
+  padding: 10px 0;
+}
+
+.navbar-top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar-top a:hover,
+span:hover {
+  color: rgb(180, 143, 22);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo,
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.logo img {
+  max-height: 60px;
+}
+
+.menu a,
+span {
+  color: #333;
+  padding: 12px;
+  text-decoration: none;
+  align-items: center;
+  display: inline-block;
+  font-weight: 640;
+}
+
+.menu i {
+  padding-right: 12px;
+  font-weight: 500;
+}
+
+.navbar-bottom {
+  background-color: #333;
+  overflow: visible;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  position: relative;
+}
+
+.navbar-bottom .container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar-bottom i {
+  font-size: 16px;
+}
+
+.navbar-bottom a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 24px 12px 24px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.f-hotel {
+  border: 2px solid rgb(255, 255, 255);
+  color: white;
+  background-color: #333;
+  padding: 0px 24px 0px 24px !important;
+  margin: 10px;
+  text-align: center;
+}
+
+.navbar-bottom a:hover {
+  background-color: #ddd;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+
+.d {
+  float: left;
+  overflow: hidden;
+}
+
+.d .d-btn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 14px 16px;
+  background: inherit;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navbar a:hover,
+.d:hover .d-btn {
+  background: #ffffff;
+  color: #000000;
+}
+
+.d-content {
+  display: none;
+  position: absolute;
+  background: white;
+  width: 100%;
+  color: #000;
+  left: 0;
+  z-index: 10;
+}
+
+.d:hover .d-content {
+  display: block;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  background: white;
+  height: 250px;
+}
+
+.column a {
+  display: block;
+  float: none;
+  color: #000000;
+  text-align: left;
+}
+
+.column h5 {
+  color: #000000;
+  font-family: serif;
+  font-weight: 800;
+  padding: 15px;
+}
+
+.column a:hover {
+  color: rgb(180, 143, 22);
+  background-color: white;
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 480px) {
+  .navbar-top .container {
+    flex-direction: column;
+  }
+
+  .navbar-top .menu {
+    order: 1;
+  }
+
+  .navbar-top .logo,
+  .navbar-bottom a,
+  .f-hotel {
+    width: auto;/
+  }
+
+  .navbar-bottom a {
+    padding: 15px 12px;
+  }
+
+  .f-hotel {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .navbar-bottom a,
+  .f-hotel {
+    padding: 12px 10px;
+  }
+}
+
+/****************** Home-section **********************/
+.carousel {
+  position: relative;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-inner p {
+  font-size: 20px;
+}
+
+.carousel-caption {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: absolute;
+  right: 15%;
+  top: 40%;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 10%;
+  left: 60% !important;
+  text-align: right;
+}
+
+.search-bar {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.521);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  width: 900px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+.search-form input[type="date"],
+.search-form input[type="text"],
+.search-form .search-button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+}
+
+.search-form .search-button {
+  background-color: #795d2f;
+  color: white;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-form input[type="text"],
+  .search-form .search-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/********************* destination-section ********************/
+
+.destinations-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.header-and-select {
+  margin-bottom: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  color: #326499;
+}
+
+.destination-select {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #585858;
+
+}
+
+.destination-highlight {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  font: 1em sans-serif;
+}
+
+.destination-image {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0px;
+}
+
+.destination-info {
+  position: absolute;
+  right: -105px;
+  bottom: 20%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: left;
+}
+
+.destination-info h3 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #3285dd;
+}
+
+.destination-info p {
+  margin-bottom: 20px;
+}
+
+
+.discover-more-btn {
+  padding: 10px 20px;
+  background-color: #3285dd;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.destination-info a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .destination-info {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .discover-more-btn {
+    display: block;
+    width: 100%;
+  }
+}
+
+/************************* promotions-section *****************/
+
+.promotions-section .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.p-title {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #326499;
+  font-style: italic;
+}
+
+.p-para {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  filter: brightness(60%)
+}
+
+.grid-item .promotion-info {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover .promotion-info {
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/****************** Modal CSS ***********/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal h5 {
+  margin-top: 10px;
+}
+
+.modal p {
+  font-size: 10px;
+  padding-left: 10px;
+}
+
+.modal button {
+  background-color: #3285dd;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: auto;
+  max-width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 10% auto;
+    width: 80%;
+  }
+}
+
+/***************** offers-section ******************/
+
+.offers-section .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.offers-section h2 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #326499;
+  font-style: italic;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.offer-card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.offer-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.offer-tag {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  background-color: #ffffff94;
+  color: rgb(63, 63, 63);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+
+.offer-card h6 {
+  margin: 16px 0 4px;
+  margin-top: 10px;
+}
+
+.offer-card h5 {
+  margin: 16px 0 4px;
+  margin-top: 20px;
+  font-size: 15px;
+
+}
+
+.offer-card h3 {
+  margin: 8px 0 0px 0px;
+  font-size: 12px;
+  color: #5c5c5c;
+
+}
+
+.price {
+  color: #414040;
+  margin-top: 30px;
+}
+
+.offer-card button {
+  background-color: #ffffff;
+  color: #795d2f;
+  text-decoration: none;
+  border: 1px solid #795d2f;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.offer-card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.253);
+}
+
+@media (max-width: 1024px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/***************  footer  ***************/
+.site-footer {
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-right: 20px;
+}
+
+.footer-column h4 {
+  color: #326499;
+  margin-bottom: 15px;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li a {
+  color: #353535;
+  text-decoration: none;
+  line-height: 2.5;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.newsletter {
+  flex: 2;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.social-links li {
+  margin-right: 10px;
+}
+
+.social-icon {
+  font-size: 16px;
+}
+
+
+.footer-column.newsletter h4 {
+  color: #326499;
+  margin-bottom: 20px;
+}
+
+
+
+.footer-column.newsletter input[type="email"] {
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+}
+
